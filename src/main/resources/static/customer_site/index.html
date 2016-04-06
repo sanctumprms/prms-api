@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hotel customer site</title>
+        <meta name="description" content="AngularJs application">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/css/bootstrap/bootstrap.css">
+        <link rel="stylesheet" href="styles/css/jqueryui/jquery-ui.css">
+        <link rel="stylesheet" href="styles/css/jqueryui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="styles/css/jqueryui/jquery-ui.theme.css">
+        <link rel="stylesheet" href="styles/css/base.css">
+        <link  href="vendors/font-awsome/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href='vendors/Lato/Lato.css' rel='stylesheet' type='text/css'>
+        <link href='vendors/lobster/lobster.css' rel='stylesheet' type='text/css'>
+        <link href='vendors/PT/pt.css' rel='stylesheet' type='text/css'>
+        <link href='vendors/playfair/playfair.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body ng-controller="mainCtrl">
+        <main-header menu-navigation="menuConfig"></main-header>
+
+        <main style="min-height: 750px">
+            <div ng-view></div>
+        </main>
+
+        <main-footer></main-footer>
+
+        <script data-main="scripts/ng-require-config" src="scripts/vendors/require/require.js"></script>
+    <script type="application/javascript" src="scripts/controllers/mainCtrl.js" />
+    </body>
+</html>

@@ -1,0 +1,29 @@
+spring:
+  profiles.active: development
+---
+spring:
+  profiles: development
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres 
+    password: admin
+    initialize: false
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    format-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      c3p0.min_size: 5
+      c3p0.max_size: 20
+      c3p0.timeout: 30
+      c3p0.max_statements: 50
+      c3p0.idle_test_period: 30	
+    properties:
+      hibernate:
+        current_session_context_class: org.hibernate.context.internal.ThreadLocalSessionContext
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        enable_lazy_load_no_trans: true
+        temp.use_jdbc_metadata_defaults: false

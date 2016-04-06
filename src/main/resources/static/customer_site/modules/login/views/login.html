@@ -1,0 +1,30 @@
+<section class="container">
+    <form ng-submit="submit()">
+        <div class="form-group">
+            <label for="username">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="Password">Password</label>
+            <input type="password" class="form-control" id="Password" placeholder="Password">
+        </div>
+        <button class="btn btn-success" type="submit">Login</button>  (Or)<a class="btn btn-link" href="#/signup">signup</a>
+        <fb-login></fb-login>
+        <div id="status">
+        </div>
+
+        <script>
+
+
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+
+        </script>
+    </form>
+</section>
